@@ -6,3 +6,8 @@ google-credentials.json
 out
 *.log
 test-auth.js
+
+# PWA files
+public/sw.js
+public/workbox-*.js
+public/worker-*.js
