@@ -20,8 +20,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="manifest" href="/ccoi-asia-2026/manifest.json" />
         <meta name="theme-color" content="#2E5B8D" />
       </head>
-      <body className="flex flex-col min-h-screen bg-bgLight">
-        <div className="flex-1 pb-24">
+      <body className="flex flex-col h-screen bg-bgLight overflow-hidden">
+        <div className="flex-1 overflow-y-auto pb-24 relative" id="main-content">
           {children}
         </div>
         <BottomNav />

@@ -67,8 +67,52 @@ function buildSpeakers(): Speaker[] {
 
   days.forEach(({ key, data }) => {
     data.sessions.forEach((session: any) => {
+      // Check for Fireside Chats special case
+      const speakersList = session.speakers as string[];
+      const combinedSpeakers = speakersList.join(' ');
+      
+      if (combinedSpeakers.includes('Hosts:') && combinedSpeakers.includes('Guests:')) {
+        // Parse Fireside Chats
+        const parts = combinedSpeakers.replace(/\n/g, ' ').split('Guests:');
+        const hostsPart = parts[0].replace('Hosts:', '').trim();
+        const guestsPart = parts[1].trim();
+        
+        const parseNames = (text: string) => {
+          return text.split(/,|&/).map(s => s.trim()).filter(Boolean);
+        };
+        
+        const allNames = [...parseNames(hostsPart), ...parseNames(guestsPart)];
+        
+        allNames.forEach(name => {
+          const normalizedName = normalizeName(name);
+          const slug = slugify(normalizedName);
+          
+          if (!map.has(slug)) {
+            map.set(slug, {
+              slug,
+              name,
+              sessions: []
+            });
+          } else {
+             const existing = map.get(slug)!;
+             existing.name = getPreferredName(existing.name, name);
+          }
+          
+          map.get(slug)!.sessions.push({
+            dayKey: key,
+            dayTitle: data.title,
+            date: data.date,
+            time: session.time,
+            title: session.title,
+            theme: session.theme,
+            location: session.location
+          });
+        });
+        return; // Skip normal processing
+      }
+
       // Process regular speakers and add their sessions
-      (session.speakers as string[]).forEach((rawName) => {
+      speakersList.forEach((rawName) => {
         if (!rawName || shouldSkip(rawName)) return;
         const name = rawName.trim();
         const normalizedName = normalizeName(name);
@@ -238,7 +282,7 @@ export default function SpeakersPage() {
       </div>
 
       {selected && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/40" onClick={() => setSelected(null)} />
           <div className="relative w-full max-w-md bg-white rounded-xl p-4 shadow-lg">
             <div className="flex items-start gap-4">
@@ -264,16 +308,15 @@ export default function SpeakersPage() {
             </div>
             <div className="mt-3 space-y-3 max-h-72 overflow-y-auto pr-1">
               {selected.sessions.map((s, idx) => (
-                <div key={idx} className="border rounded-lg p-3 bg-gray-50">
+                <Link href="/agenda" key={idx} className="block border rounded-lg p-3 bg-gray-50 hover:bg-gray-100 transition-colors">
                   <div className="text-xs text-gray-500">{s.dayTitle} • {s.date}</div>
                   <div className="text-sm font-semibold text-gray-800 mt-1">{s.title}</div>
                   {s.theme && <div className="text-xs text-gray-500 mt-0.5">{s.theme}</div>}
                   <div className="text-xs text-gray-500 mt-0.5">{s.time} — {s.location}</div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="mt-4 text-right">
-              <Link href="/agenda" className="text-sm text-[#2E5B8D] underline mr-3">View agenda</Link>
               <button onClick={() => setSelected(null)} className="px-4 py-2 rounded bg-[#2E5B8D] text-white">Close</button>
             </div>
           </div>
