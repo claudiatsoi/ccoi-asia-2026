@@ -113,7 +113,7 @@
         "title": "Long-Term Follow-Up of Effectiveness – What Are the Acceptable Alternatives?",
         "location": "Grand Ballroom",
         "speakers": [
-          "Seo Wei LEO (Singapore)"
+          "TBC"
         ],
         "moderators": [],
         "panelists": [],
@@ -729,19 +729,6 @@
       {
         "time": "08:50–10:40",
         "theme": "Session 1: Defining the Future – Establishing Standard Terminology & Endpoints for Oculomics",
-        "title": "What Should the Oculomics Ecosystem Look Like?",
-        "location": "Grand Ballroom",
-        "speakers": [
-          "Tien WONG (China)"
-        ],
-        "moderators": [],
-        "panelists": [],
-        "description": "",
-        "block": "09:30–09:38"
-      },
-      {
-        "time": "08:50–10:40",
-        "theme": "Session 1: Defining the Future – Establishing Standard Terminology & Endpoints for Oculomics",
         "title": "Regulatory Pathway for Oculomics",
         "location": "Grand Ballroom",
         "speakers": [
@@ -750,7 +737,7 @@
         "moderators": [],
         "panelists": [],
         "description": "",
-        "block": "09:38–09:46"
+        "block": "09:30–09:38"
       },
       {
         "time": "08:50–10:40",
@@ -763,7 +750,7 @@
         "moderators": [],
         "panelists": [],
         "description": "",
-        "block": "09:46–09:54"
+        "block": "09:38–09:46"
       },
       {
         "time": "08:50–10:40",
@@ -776,7 +763,7 @@
         "moderators": [],
         "panelists": [],
         "description": "",
-        "block": "09:54–10:02"
+        "block": "09:46–09:54"
       },
       {
         "time": "08:50–10:40",
@@ -789,7 +776,7 @@
         "moderators": [],
         "panelists": [],
         "description": "",
-        "block": "10:02–10:10"
+        "block": "09:54–10:02\n"
       },
       {
         "time": "08:50–10:40",
@@ -802,7 +789,7 @@
         "moderators": [],
         "panelists": [],
         "description": "",
-        "block": "10:10–10:18"
+        "block": "10:02–10:10"
       },
       {
         "time": "08:50–10:40",
@@ -811,6 +798,19 @@
         "location": "Grand Ballroom",
         "speakers": [
           "Lisa ZHU (Australia)"
+        ],
+        "moderators": [],
+        "panelists": [],
+        "description": "",
+        "block": "10:10–10:18"
+      },
+      {
+        "time": "08:50–10:40",
+        "theme": "Session 1: Defining the Future – Establishing Standard Terminology & Endpoints for Oculomics",
+        "title": "What Should the Oculomics Ecosystem Look Like?",
+        "location": "Grand Ballroom",
+        "speakers": [
+          "Tien WONG (China)"
         ],
         "moderators": [],
         "panelists": [],
@@ -826,7 +826,7 @@
         "moderators": [],
         "panelists": [
           "Kevin CHOI (South Korea)",
-          "Anran RAN (Hong Kong)",
+          "Aaron LEE (U.S.) Anran RAN (Hong Kong)",
           "Yih Chung THAM (Singapore)",
           "Ehsan VAGHEFI (U.S.)"
         ],
