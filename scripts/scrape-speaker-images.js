@@ -71,6 +71,8 @@ async function scrapeSpeakers() {
     let imgMatch;
     const speakers = {};
     let count = 0;
+    const downloadQueue = [];
+    const CONCURRENCY_LIMIT = 5;
     
     while ((imgMatch = imgRegex.exec(html)) !== null) {
       const imgTag = imgMatch[0];
@@ -95,16 +97,24 @@ async function scrapeSpeakers() {
         const filename = `${slug}${extension}`;
         const filepath = path.join(OUTPUT_DIR, filename);
         
-        console.log(`Downloading: ${speakerName} -> ${filename}`);
+        speakers[slug] = `/images/speakers/${filename}`;
         
-        try {
-          await downloadImage(imageUrl, filepath);
-          speakers[slug] = `/images/speakers/${filename}`;
-          count++;
-        } catch (err) {
-          console.error(`  ✗ Failed: ${err.message}`);
-        }
+        downloadQueue.push(async () => {
+            console.log(`Downloading: ${speakerName} -> ${filename}`);
+            try {
+                await downloadImage(imageUrl, filepath);
+                count++;
+            } catch (err) {
+                console.error(`  ✗ Failed: ${err.message}`);
+            }
+        });
       }
+    }
+
+    // Process queue with concurrency limit
+    for (let i = 0; i < downloadQueue.length; i += CONCURRENCY_LIMIT) {
+        const chunk = downloadQueue.slice(i, i + CONCURRENCY_LIMIT);
+        await Promise.all(chunk.map(fn => fn()));
     }
     
     // Save mapping
