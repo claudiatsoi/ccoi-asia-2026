@@ -168,7 +168,7 @@ function buildSpeakers(): Speaker[] {
         });
       }
 
-      // Process panelists - create profile but DON'T add panel session
+      // Process panelists - create profile and add panel session
       if (session.panelists && Array.isArray(session.panelists)) {
         session.panelists.forEach((rawName: string) => {
           if (!rawName || shouldSkip(rawName)) return;
@@ -187,7 +187,18 @@ function buildSpeakers(): Speaker[] {
             const existing = map.get(slug)!;
             existing.name = getPreferredName(existing.name, name);
           }
-          // Don't add the panel session to their profile
+          
+          // Add the panel session to their profile
+          map.get(slug)!.sessions.push({
+            dayKey: key,
+            dayTitle: data.title,
+            date: data.date,
+            time: session.time,
+            block: session.block,
+            title: session.title,
+            theme: session.theme,
+            location: session.location
+          });
         });
       }
     });
