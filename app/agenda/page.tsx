@@ -228,7 +228,16 @@ function AgendaContent() {
         )}
         <div className="space-y-8">
           {themes.map((theme) => {
-            const themeTime = groupedSessions[theme][0]?.time || '';
+            const themeSessions = groupedSessions[theme];
+            const themeTime = themeSessions[0]?.time || '';
+
+            // Get all chairs for this theme from the full unfiltered list to ensure we don't miss any
+            // if the first session is filtered out
+            const allThemeSessions = sessions.filter(s => s.theme === theme);
+            const uniqueChairs = Array.from(new Set(
+              allThemeSessions.flatMap(session => session.chairs || [])
+            )).filter(Boolean);
+
             return (
               <section key={theme} className="space-y-3">
                 <div>
@@ -240,13 +249,13 @@ function AgendaContent() {
                       <span className="text-xs text-gray-500">{themeTime}</span>
                     )}
                   </div>
-                  {groupedSessions[theme][0]?.chairs && groupedSessions[theme][0].chairs.length > 0 && (
+                  {uniqueChairs.length > 0 && (
                     <div className="mt-1 text-sm text-gray-600 flex flex-wrap gap-1">
                       <span className="font-bold text-gray-800">Chairs:</span>
-                      {groupedSessions[theme][0].chairs.map((chair, i) => {
+                      {uniqueChairs.map((chair, i) => {
                         const linkable = isLinkable(chair);
                         const slug = slugify(normalizeName(chair));
-                        const isLast = i === (groupedSessions[theme][0].chairs?.length ?? 0) - 1;
+                        const isLast = i === uniqueChairs.length - 1;
                         return (
                           <span key={`chair-${chair}-${i}`} className="inline-flex items-center gap-1">
                             {linkable ? (

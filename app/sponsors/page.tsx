@@ -12,18 +12,25 @@ export default function SponsorsPage() {
       website: 'https://www.alcon.com/'
     },
     { 
-      name: 'RSCV', 
-      tier: 'Co-Host', 
-      role: 'Myopia Day Lunch Symposium',
-      logo: getImagePath('/images/sponsors/rscv.png'),
-      website: '#'
-    },
-    { 
       name: 'Santen', 
       tier: 'Gold Sponsor', 
       role: 'Myopia Day',
       logo: getImagePath('/images/sponsors/santen.png'),
       website: 'https://www.santen.com/en'
+    },
+    { 
+      name: 'Bruno', 
+      tier: 'Silver Sponsor', 
+      role: 'Full Forum',
+      logo: getImagePath('/images/sponsors/bruno.png'),
+      website: 'https://www.brunovisioncare.com/'
+    },
+    { 
+      name: 'RSCV', 
+      tier: 'Co-Host', 
+      role: 'Myopia Day Lunch Symposium',
+      logo: getImagePath('/images/sponsors/rscv.png'),
+      website: 'https://www.polyu.edu.hk/rcsv/'
     },
     { 
       name: 'Valitor', 

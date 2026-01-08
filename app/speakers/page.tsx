@@ -25,6 +25,7 @@ type SpeakerSession = {
   title: string;
   theme?: string;
   location: string;
+  role?: string;
 };
 
 type Speaker = {
@@ -234,15 +235,18 @@ function buildSpeakers(): Speaker[] {
           }
           
           // Add the session to their profile
+          // For chairs, we use the theme as the title to indicate they are chairing the session block
+          // rather than speaking at the specific first talk of the block
           map.get(slug)!.sessions.push({
             dayKey: key,
             dayTitle: data.title,
             date: data.date,
             time: session.time,
             block: session.block,
-            title: session.title,
-            theme: session.theme,
-            location: session.location
+            title: session.theme || session.title,
+            theme: session.theme ? undefined : session.theme,
+            location: session.location,
+            role: 'Chair'
           });
         });
       }
@@ -425,7 +429,10 @@ function SpeakersContent() {
                   className="block border rounded-lg p-3 bg-gray-50 hover:bg-gray-100 transition-colors"
                 >
                   <div className="text-xs text-gray-500">{s.dayTitle} • {s.date}</div>
-                  <div className="text-sm font-semibold text-gray-800 mt-1">{s.title}</div>
+                  <div className="text-sm font-semibold text-gray-800 mt-1">
+                    {s.role && <span className="text-[#2E5B8D] mr-1">{s.role}:</span>}
+                    {s.title}
+                  </div>
                   {s.theme && <div className="text-xs text-gray-500 mt-0.5">{s.theme}</div>}
                   <div className="text-xs text-gray-500 mt-0.5">{s.time} — {s.location}</div>
                 </Link>
