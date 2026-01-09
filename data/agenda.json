@@ -425,7 +425,7 @@
       {
         "time": "14:05–15:15",
         "theme": "Session 4: Rays That Slow – Harnessing Light to Fight Myopia",
-        "title": "TBC",
+        "title": "Light Therapy as a Novel Approach to Axial Length Reduction in High Myopia Patients",
         "location": "Grand III, IV & Annex",
         "speakers": [
           "Jason SUN (Australia)"
@@ -1119,20 +1119,6 @@
       {
         "time": "11:15–12:40",
         "theme": "Session 4: Anterior Segment – Innovation & Regenerative Medicine",
-        "title": "TBC",
-        "location": "Grand III, IV & Annex",
-        "speakers": [
-          "Ashvin AGARWAL (India)"
-        ],
-        "moderators": [],
-        "panelists": [],
-        "chairs": [],
-        "description": "",
-        "block": "11:39–11:47"
-      },
-      {
-        "time": "11:15–12:40",
-        "theme": "Session 4: Anterior Segment – Innovation & Regenerative Medicine",
         "title": "Novel Approaches in Corneal Repair",
         "location": "Grand III, IV & Annex",
         "speakers": [
@@ -1142,7 +1128,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "11:47–11:55"
+        "block": "11:39–11:47"
       },
       {
         "time": "11:15–12:40",
@@ -1156,7 +1142,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "11:55–12:03"
+        "block": "11:47–11:55"
       },
       {
         "time": "11:15–12:40",
@@ -1170,7 +1156,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "12:03–12:11"
+        "block": "11:55–12:03"
       },
       {
         "time": "11:15–12:40",
@@ -1198,7 +1184,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "12:11–12:18"
+        "block": "12:03–12:11"
       },
       {
         "time": "11:15–12:40",
@@ -1274,10 +1260,10 @@
       {
         "time": "14:40–16:00",
         "theme": "Session 5: Global Innovation Landscape in Retina",
-        "title": "Ophthalmic Innovation Landscape from Singapore",
+        "title": "Retinal Innovation in China: Observations, Challenges and Opportunities",
         "location": "Grand Ballroom",
         "speakers": [
-          "Rainny XIE (Singapore)"
+          "Tien WONG (China)"
         ],
         "moderators": [],
         "panelists": [],
@@ -1291,20 +1277,6 @@
       {
         "time": "14:40–16:00",
         "theme": "Session 5: Global Innovation Landscape in Retina",
-        "title": "Retinal Innovation in China: Observations, Challenges and Opportunities",
-        "location": "Grand Ballroom",
-        "speakers": [
-          "Tien WONG (China)"
-        ],
-        "moderators": [],
-        "panelists": [],
-        "chairs": [],
-        "description": "",
-        "block": "14:48–14:56"
-      },
-      {
-        "time": "14:40–16:00",
-        "theme": "Session 5: Global Innovation Landscape in Retina",
         "title": "Shaping Eye Health Strategy – A Pharma Perspective",
         "location": "Grand Ballroom",
         "speakers": [
@@ -1314,7 +1286,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "14:56–15:04"
+        "block": "14:48–14:56"
       },
       {
         "time": "14:40–16:00",
@@ -1328,7 +1300,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "15:04–15:12"
+        "block": "14:56–15:04"
       },
       {
         "time": "14:40–16:00",
@@ -1342,7 +1314,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "15:12–15:20"
+        "block": "15:04–15:12"
       },
       {
         "time": "14:40–16:00",
@@ -1356,7 +1328,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "15:20–15:28"
+        "block": "15:12–15:20"
       },
       {
         "time": "14:40–16:00",
@@ -1370,12 +1342,12 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "15:28–15:36"
+        "block": "15:20–15:28"
       },
       {
         "time": "14:40–16:00",
         "theme": "Session 5: Global Innovation Landscape in Retina",
-        "title": "Setting Standards for AI in Retinal Imaging...",
+        "title": "Setting Standards for AI in Retinal Imaging: A Joint CCOI–IntRIS Consensus on AMD OCT",
         "location": "Grand Ballroom",
         "speakers": [
           "Omer TRIVIZKI (Israel)"
@@ -1384,7 +1356,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "15:36–15:44"
+        "block": "15:28–15:36"
       },
       {
         "time": "14:40–16:00",
@@ -1396,7 +1368,7 @@
         "panelists": [],
         "chairs": [],
         "description": "",
-        "block": "15:44–16:00"
+        "block": "15:36–16:00"
       },
       {
         "time": "14:40–16:00",
@@ -1446,10 +1418,10 @@
       {
         "time": "14:40–16:00",
         "theme": "Session 6: Imaging Innovation",
-        "title": "Imaging-Guided Therapy in Retinal Disease",
+        "title": "Imaging Endpoints in Clinical Trials – Where Are We Heading?",
         "location": "Grand III, IV & Annex",
         "speakers": [
-          "Caroline BAUMAL (U.S.)"
+          "Daniela FERRARA (U.S.)"
         ],
         "moderators": [],
         "panelists": [],
@@ -1460,10 +1432,10 @@
       {
         "time": "14:40–16:00",
         "theme": "Session 6: Imaging Innovation",
-        "title": "Imaging Endpoints in Clinical Trials – Where Are We Heading?",
+        "title": "AI/Imaging Startups: From Prototype to Practice",
         "location": "Grand III, IV & Annex",
         "speakers": [
-          "Daniela FERRARA (U.S.)"
+          "Eisuke SHIMIZU (Japan)"
         ],
         "moderators": [],
         "panelists": [],
@@ -1474,10 +1446,10 @@
       {
         "time": "14:40–16:00",
         "theme": "Session 6: Imaging Innovation",
-        "title": "AI/Imaging Startups: From Prototype to Practice",
+        "title": "TBC",
         "location": "Grand III, IV & Annex",
         "speakers": [
-          "Eisuke SHIMIZU (Japan)"
+          "Ashvin AGARWAL (India)"
         ],
         "moderators": [],
         "panelists": [],
