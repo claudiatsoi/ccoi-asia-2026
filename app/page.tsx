@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, Users, Info, Network, ClipboardList, BookOpen } from 'lucide-react';
+import { Calendar, Users, Monitor, Network, ClipboardList, BookOpen } from 'lucide-react';
 import { getImagePath } from '../lib/utils';
 import InstallPrompt from './components/InstallPrompt';
 
@@ -8,7 +8,7 @@ export default function Home() {
   const quickLinks = [
     { icon: Calendar, label: 'Agenda', href: '/agenda' },
     { icon: Users, label: 'Speakers', href: '/speakers' },
-    { icon: Info, label: 'About CCOI', href: '/about' },
+    { icon: Monitor, label: 'Virtual Exhibition', href: 'https://spot.eventx.io/events/7f1c370a-d533-4e1a-ad98-5a17bcfcd5d3' },
     { icon: Network, label: 'Networking', href: 'https://spot.eventx.io/events/7f1c370a-d533-4e1a-ad98-5a17bcfcd5d3' },
     { icon: ClipboardList, label: 'Sponsors', href: '/sponsors' },
     { icon: BookOpen, label: 'Register', href: 'https://spot.eventx.io/events/7f1c370a-d533-4e1a-ad98-5a17bcfcd5d3' },
